@@ -1,0 +1,35 @@
+name: Node.js CI (Server)
+
+on:
+  push:
+    paths:
+    - 'bluemog-server/**'
+    branches: 
+    - main
+  pull_request:
+    paths:
+    - 'bluemog-server/**'
+    branches: 
+    - main
+
+jobs:
+  build:
+    name: Test & Build App
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: bluemog-server
+    strategy:
+      matrix:
+        node-version: [14.x, 15.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: |
+        npm install
+        npm test
+        npm run build
