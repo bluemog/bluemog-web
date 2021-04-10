@@ -10,7 +10,8 @@ interface Props {
 function ExperienceLabel({ backgroundColorInHex = 'fe03ee', font = 'Noto Sans KR', children }: Props) {
   const labelStyle = css`
     display: inline-block;
-    padding: 16px;
+    padding: 8px 12px;
+    border-radius: 10px;
     background: #${backgroundColorInHex};
     font-family: ${font}, sans-serif
   `;
