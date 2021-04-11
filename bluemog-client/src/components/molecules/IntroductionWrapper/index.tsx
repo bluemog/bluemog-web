@@ -28,27 +28,27 @@ function IntroductionWrapper({
     width: ${width};
     height: ${height};
     background: #${backgroundColorInHex};
-  `;
 
-  const textStyle = css`
-    color: #1684b5;
-    font-family: ${font}, sans-serif;
-    font-size: ${fontSize};
-    line-height: 2;
-    letter-spacing: 0.65px;
-    margin: ${margin};
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: ${lineClamp};
-    -webkit-box-orient: vertical;
-    word-wrap:break-word; 
+    p {
+      color: #1684b5;
+      font-family: ${font}, sans-serif;
+      font-size: ${fontSize};
+      line-height: 2;
+      letter-spacing: 0.65px;
+      margin: ${margin};
+  
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: ${lineClamp};
+      -webkit-box-orient: vertical;
+      word-wrap:break-word; 
+    }
   `;
 
   return (
     <div css={wrapperStyle}>
-      <p css={textStyle}>
+      <p>
         {children}
       </p>
     </div>
