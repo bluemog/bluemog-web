@@ -10,6 +10,6 @@ const Template = (args) => <Name {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: 'JSKeum',
-  font: 'Ubuntu',
+  name: 'JSKeum',
+  font: 'Roboto',
 };
