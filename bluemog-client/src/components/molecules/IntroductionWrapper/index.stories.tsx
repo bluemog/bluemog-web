@@ -10,5 +10,5 @@ const Template = (args: Props) => <IntroductionWrapper {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: '저는 개발을 잘합니다. 저는 개발을 잘합니다. 저는 개발을 잘합니다.',
+  text: '저는 개발을 잘합니다. 저는 개발을 잘합니다. 저는 개발을 잘합니다.',
 };
