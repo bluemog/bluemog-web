@@ -1,12 +1,12 @@
 import React from 'react';
-import IntroductionWrapper from './index';
+import IntroductionWrapper, { Props } from '.';
 
 export default {
   component: IntroductionWrapper,
   title: 'Introduction Wrapper',
 };
 
-const Template = (args) => <IntroductionWrapper {...args} />;
+const Template = (args: Props) => <IntroductionWrapper {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

@@ -1,12 +1,12 @@
 import React from 'react';
-import ExperienceLabel from './index';
+import ExperienceLabel, { Props } from '.';
 
 export default {
   component: ExperienceLabel,
   title: 'Experience Label',
 };
 
-const Template = (args) => <ExperienceLabel {...args} />;
+const Template = (args: Props) => <ExperienceLabel {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

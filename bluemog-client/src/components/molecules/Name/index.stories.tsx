@@ -1,12 +1,12 @@
 import React from 'react';
-import Name from './index';
+import Name, { Props } from '.';
 
 export default {
   component: Name,
   title: 'Name',
 };
 
-const Template = (args) => <Name {...args} />;
+const Template = (args: Props) => <Name {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

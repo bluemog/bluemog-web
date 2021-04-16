@@ -1,13 +1,13 @@
 import React from 'react';
-import ProfileImage from './index';
-import imageFile from '../../../assets/images/gummy.jpg';
+import ProfileImage, { Props } from '.';
+import imageFile from '../../../../public/assets/images/gummy.jpg';
 
 export default {
   component: ProfileImage,
   title: 'Profile Image',
 };
 
-const Template = (args) => <ProfileImage {...args} />;
+const Template = (args: Props) => <ProfileImage {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
