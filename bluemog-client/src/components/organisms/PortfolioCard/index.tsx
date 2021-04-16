@@ -1,34 +1,40 @@
 import React from 'react';
+import { css } from '@emotion/react';
 import IntroductionWrapper from '../../molecules/IntroductionWrapper';
-import ProfileImage from '../../molecules/ProfileImage';
+import PortfolioCardHead from '../../molecules/PortfolioCardHead';
 
-interface Portfolio {
+export interface Portfolio {
     name: string;
     profileImageURL: string;
     labels: string[];
     introduction: string;
 }
 
-interface Props {
+export interface Props {
     portfolio: Portfolio;
+    width?: string;
+    height?: string;
 }
 
-function ProfileCard({ portfolio }: Props) {
-  const imageStyle = css`
+function ProfileCard({ portfolio, width = '30vw', height = '45.4vw' }: Props) {
+  const componentCSS = css`
         width: ${width};
         height: ${height};
         border-radius: 12px;
+        padding: 30px;
+        background-color: bisque;
     `;
 
   return (
-    <div>
-      <div>
-        <ProfileImage src={portfolio.profileImageURL} />
-        
-      </div>
+    <div css={componentCSS}>
+      <PortfolioCardHead
+        profileImageURL={portfolio.profileImageURL}
+        labels={portfolio.labels}
+        name={portfolio.name}
+      />
       <IntroductionWrapper text={portfolio.introduction} />
     </div>
   );
 }
 
-export default ProfileImage;
+export default ProfileCard;
