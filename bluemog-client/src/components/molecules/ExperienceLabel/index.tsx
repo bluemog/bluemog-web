@@ -7,7 +7,7 @@ export interface Props {
     font?: string;
 }
 
-function ExperienceLabel({ backgroundColorInHex = 'fe03ee', font = 'Noto Sans KR', text }: Props) {
+function ExperienceLabel({ backgroundColorInHex = 'C7E9FF', font = 'Noto Sans KR', text }: Props) {
   const labelStyle = css`
     display: inline-block;
     padding: 8px 12px;
