@@ -2,12 +2,12 @@ import React from 'react';
 import { css } from '@emotion/react';
 
 export interface Props {
-    children?: React.ReactNode;
+    text: string;
     backgroundColorInHex?: string;
     font?: string;
 }
 
-function ExperienceLabel({ backgroundColorInHex = 'fe03ee', font = 'Noto Sans KR', children }: Props) {
+function ExperienceLabel({ backgroundColorInHex = 'fe03ee', font = 'Noto Sans KR', text }: Props) {
   const labelStyle = css`
     display: inline-block;
     padding: 8px 12px;
@@ -18,7 +18,7 @@ function ExperienceLabel({ backgroundColorInHex = 'fe03ee', font = 'Noto Sans KR
 
   return (
     <span css={labelStyle}>
-      {children}
+      {text}
     </span>
   );
 }
