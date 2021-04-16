@@ -3,7 +3,7 @@ import ExperienceLabel, { Props } from '.';
 
 export default {
   component: ExperienceLabel,
-  title: 'Experience Label',
+  title: 'Molcules/Experience Label',
 };
 
 const Template = (args: Props) => <ExperienceLabel {...args} />;
