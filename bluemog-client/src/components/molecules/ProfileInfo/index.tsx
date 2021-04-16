@@ -9,7 +9,7 @@ export interface Props {
     height?: string;
 }
 
-function ProfileInfo({ name, labels, height = '140px' }: Props) {
+function ProfileInfo({ name, labels, height = '100%' }: Props) {
   const componentCSS = css`
     display: flex;
     flex-direction: column;
@@ -18,12 +18,10 @@ function ProfileInfo({ name, labels, height = '140px' }: Props) {
     justify-content: space-between;
     `;
 
-  const labelsToBeShown = labels.filter((label) => label !== '').slice(0, 2);
-
   return (
     <div css={componentCSS}>
       <Name name={name} />
-      {labelsToBeShown.map((label) => (
+      {labels.map((label) => (
         <ExperienceLabel text={label} />
       ))}
     </div>
