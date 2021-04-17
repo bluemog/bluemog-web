@@ -17,13 +17,13 @@ function IntroductionWrapper({
   font = 'Noto Sans KR',
   fontSize = '18px',
   text,
-  width = '310px',
-  height = '320px',
-  margin = '10px 20px 5px 20px',
+  width = '100%',
+  height = '60%',
+  margin = '10px 25px 5px 25px',
   lineClamp = 8,
 }: Props) {
   const wrapperStyle = css`
-    padding: 10px;
+    padding: 10px 0;
     border-radius: 12px;
     width: ${width};
     height: ${height};

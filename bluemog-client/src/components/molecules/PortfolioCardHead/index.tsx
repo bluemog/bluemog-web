@@ -9,10 +9,11 @@ export interface Props {
     name: string;
     height?: string;
     width?: string;
+    margin?: string;
 }
 
 function ProfileCardHead({
-  profileImageURL, name, labels, height = '140px', width = '100%',
+  profileImageURL, name, labels, height = '30%', width = '100%', margin = '10%',
 }: Props) {
   const componentCSS = css`
     display: flex;
@@ -26,7 +27,7 @@ function ProfileCardHead({
   return (
     <div css={componentCSS}>
       <ProfileImage src={profileImageURL} />
-      <ProfileInfo name={name} labels={labelsToBeShown} />
+      <ProfileInfo margin={margin} name={name} labels={labelsToBeShown} />
     </div>
   );
 }
