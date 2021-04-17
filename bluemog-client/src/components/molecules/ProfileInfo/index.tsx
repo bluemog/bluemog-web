@@ -7,11 +7,11 @@ export interface Props {
     name: string;
     labels: string[];
     height?: string;
-    margin?: string;
+    marginLeft?: string;
 }
 
 function ProfileInfo({
-  name, labels, height = '100%', margin,
+  name, labels, height = '100%', marginLeft,
 }: Props) {
   const componentCSS = css`
     display: flex;
@@ -19,7 +19,7 @@ function ProfileInfo({
     align-items: flex-start;
     height: ${height};
     justify-content: space-between;
-    margin-left: ${margin};
+    margin-left: ${marginLeft};
     `;
 
   return (
