@@ -1,8 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
-interface Props {
-    children?: React.ReactNode;
+export interface Props {
+    text: string;
     backgroundColorInHex?: string;
     font?: string;
     fontSize?: string;
@@ -16,14 +16,14 @@ function IntroductionWrapper({
   backgroundColorInHex = 'edf5fa',
   font = 'Noto Sans KR',
   fontSize = '18px',
-  children,
-  width = '310px',
-  height = '320px',
-  margin = '10px 20px 5px 20px',
+  text,
+  width = '100%',
+  height = '60%',
+  margin = '10px 25px 5px 25px',
   lineClamp = 8,
 }: Props) {
   const wrapperStyle = css`
-    padding: 10px;
+    padding: 10px 0;
     border-radius: 12px;
     width: ${width};
     height: ${height};
@@ -49,7 +49,7 @@ function IntroductionWrapper({
   return (
     <div css={wrapperStyle}>
       <p>
-        {children}
+        {text}
       </p>
     </div>
   );

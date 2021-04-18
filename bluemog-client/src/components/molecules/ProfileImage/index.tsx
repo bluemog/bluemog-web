@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
-interface Props {
+export interface Props {
     src: string,
     width?: string,
     height?: string,
