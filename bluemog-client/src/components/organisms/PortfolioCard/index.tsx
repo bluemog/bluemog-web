@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import IntroductionWrapper from '../../molecules/IntroductionWrapper';
-import PortfolioCardHead from '../../molecules/PortfolioCardHead';
+import IntroductionWrapper from 'components/molecules/IntroductionWrapper';
+import PortfolioCardHead from 'components/molecules/PortfolioCardHead';
 
 export interface Portfolio {
     name: string;
