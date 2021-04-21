@@ -16,10 +16,10 @@ const samplePortfolio: Portfolio = {
   profileImageURL: imageFile,
   labels: ['국어국문학과', '정보문화학'],
   introduction: '따뜻한 얼그레이 한 잔 주세요',
-  height: '560px',
-  width: '370px',
 };
 
 Default.args = {
   portfolio: samplePortfolio,
+  height: '560px',
+  width: '370px',
 };
