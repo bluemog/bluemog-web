@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { ComponentProps } from 'react';
 import { css } from '@emotion/react';
 import IntroductionWrapper from 'components/molecules/IntroductionWrapper';
 import PortfolioCardHead from 'components/molecules/PortfolioCardHead';
+import Name from 'components/molecules/Name';
+import ExperienceLabel from 'components/molecules/ExperienceLabel';
+
+type NameProps = ComponentProps<typeof Name>;
+type ExperienceLabelProps = ComponentProps<typeof ExperienceLabel>;
+type NameText = NameProps['name'];
+type ExperienceLabelText = ExperienceLabelProps['text'];
 
 export interface Portfolio {
-    name: string;
+    name: NameText;
     profileImageURL: string;
-    labels: string[];
+    labels: ExperienceLabelText[];
     introduction: string;
 }
 
@@ -32,7 +39,7 @@ function ProfileCard({ portfolio, width = '30vw', height = '45.4vw' }: Props) {
   return (
     <div css={componentCSS}>
       <PortfolioCardHead
-        profileImageURL={portfolio.profileImageURL}
+        src={portfolio.profileImageURL}
         labels={portfolio.labels}
         name={portfolio.name}
       />

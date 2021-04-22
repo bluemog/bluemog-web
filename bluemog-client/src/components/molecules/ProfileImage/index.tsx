@@ -3,14 +3,10 @@ import { css } from '@emotion/react';
 
 export interface Props {
     src: string,
-    width?: string,
-    height?: string,
 }
 
-function ProfileImage({ src, width, height }: Props) {
+function ProfileImage({ src }: Props) {
   const imageStyle = css`
-        width: ${width};
-        height: ${height};
         border-radius: 12px;
     `;
 

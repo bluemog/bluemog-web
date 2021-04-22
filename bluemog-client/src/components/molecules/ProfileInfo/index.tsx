@@ -1,23 +1,28 @@
-import React from 'react';
+import React, { ComponentProps } from 'react';
 import { css } from '@emotion/react';
 import ExperienceLabel from '../ExperienceLabel';
 import Name from '../Name';
 
+type NameProps = ComponentProps<typeof Name>;
+type ExperienceLabelProps = ComponentProps<typeof ExperienceLabel>;
+type NameText = NameProps['name'];
+type ExperienceLabelText = ExperienceLabelProps['text'];
+
 export interface Props {
-    name: string;
-    labels: string[];
+    name: NameText;
+    labels: ExperienceLabelText[];
     height?: string;
     marginLeft?: string;
 }
 
 function ProfileInfo({
-  name, labels, height = '100%', marginLeft,
+  name, labels, marginLeft,
 }: Props) {
   const componentCSS = css`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: ${height};
+    height: '100%';
     justify-content: space-between;
     margin-left: ${marginLeft};
     `;
