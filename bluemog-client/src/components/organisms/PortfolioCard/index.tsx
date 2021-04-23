@@ -1,27 +1,39 @@
-import React from 'react';
+import React, { ComponentProps } from 'react';
 import { css } from '@emotion/react';
-import IntroductionWrapper from '../../molecules/IntroductionWrapper';
-import PortfolioCardHead from '../../molecules/PortfolioCardHead';
+import IntroductionWrapper from 'components/molecules/IntroductionWrapper';
+import PortfolioCardHead from 'components/molecules/PortfolioCardHead';
+import ProfileInfo from 'components/molecules/ProfileInfo';
+import styled from '@emotion/styled';
+import ProfileImage from '../../molecules/ProfileImage/index';
 
-export interface Portfolio {
-    name: string;
-    profileImageURL: string;
-    labels: string[];
-    introduction: string;
-}
+type ProfileInfoProps = ComponentProps<typeof ProfileInfo>;
+type ProfileImageProps = ComponentProps<typeof ProfileImage>;
+type IntroductionWrapperProps = ComponentProps<typeof IntroductionWrapper>;
+
+export type Portfolio = Pick<ProfileImageProps, 'src'> & ProfileInfoProps & IntroductionWrapperProps;
 
 export interface Props {
     portfolio: Portfolio;
-    width?: string;
-    height?: string;
 }
 
-function ProfileCard({ portfolio, width = '30vw', height = '45.4vw' }: Props) {
+const StyledPortfolioCardHead = styled(PortfolioCardHead)`
+  width: 100%;
+  height: 30%;
+`;
+
+const StyledIntroductionWrapper = styled(IntroductionWrapper)`
+  width: 100%;
+  height: 60%;
+`;
+
+function ProfileCard({ portfolio }: Props) {
   const componentCSS = css`
-        width: ${width};
-        height: ${height};
+        width: 30vw;
+        height: 45.4vw;
+        min-width: 260px;
+        min-height: 400px;
         border-radius: 12px;
-        padding: 30px;
+        padding: calc(50vw * 0.08) calc(30vw * 0.08) calc(32vw * 0.08) calc(30vw * 0.08);
         background-color: skyblue;
         display: flex;
         flex-direction: column;
@@ -31,12 +43,12 @@ function ProfileCard({ portfolio, width = '30vw', height = '45.4vw' }: Props) {
 
   return (
     <div css={componentCSS}>
-      <PortfolioCardHead
-        profileImageURL={portfolio.profileImageURL}
+      <StyledPortfolioCardHead
+        src={portfolio.src}
         labels={portfolio.labels}
         name={portfolio.name}
       />
-      <IntroductionWrapper text={portfolio.introduction} />
+      <StyledIntroductionWrapper text={portfolio.text} />
     </div>
   );
 }

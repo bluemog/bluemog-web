@@ -1,25 +1,23 @@
 import React from 'react';
 import { css } from '@emotion/react';
+import { BMDeepMint } from 'constants/theme';
 
 export interface Props {
     name: string,
-    color?: string,
-    font?: string,
-    fontSize?: string,
 }
 
 function Name({
-  name, color = '1684b5', font = 'Roboto', fontSize = '20px',
+  name,
 }: Props) {
-  const nameStyle = css`
-        color: #${color};
-        font-family: ${font}, sans-serif;
-        font-size: ${fontSize};
+  const componentCSS = css`
+        color: ${BMDeepMint};
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
         font-weight: bold;
     `;
 
   return (
-    <span css={nameStyle}>
+    <span css={componentCSS}>
       {name}
     </span>
   );

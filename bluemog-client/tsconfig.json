@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "types": ["@emotion/react/types/css-prop"],
     "target": "es5",
     "lib": [
@@ -20,6 +21,7 @@
     "jsx": "preserve"
   },
   "include": [
+    "src",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"

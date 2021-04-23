@@ -4,7 +4,7 @@ import imageFile from '../../../../public/assets/images/gummy.jpg';
 
 export default {
   component: ProfileImage,
-  title: 'Molcules/Profile Image',
+  title: 'Components/Molcules/Profile Image',
 };
 
 const Template = (args: Props) => <ProfileImage {...args} />;
@@ -12,6 +12,5 @@ const Template = (args: Props) => <ProfileImage {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   src: imageFile,
-  width: '130px',
-  height: '130px',
+  alt: 'profile',
 };

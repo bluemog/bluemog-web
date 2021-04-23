@@ -1,19 +1,19 @@
 import React from 'react';
 import { css } from '@emotion/react';
+import { BMFont } from 'styles/base';
+import { BMSkyblue } from 'constants/theme';
 
 export interface Props {
     text: string;
-    backgroundColorInHex?: string;
-    font?: string;
 }
 
-function ExperienceLabel({ backgroundColorInHex = 'C7E9FF', font = 'Noto Sans KR', text }: Props) {
+function ExperienceLabel({ text }: Props) {
   const labelStyle = css`
+    ${BMFont};
     display: inline-block;
     padding: 8px 12px;
     border-radius: 10px;
-    background: #${backgroundColorInHex};
-    font-family: ${font}, sans-serif
+    background: ${BMSkyblue};  
   `;
 
   return (
