@@ -4,7 +4,7 @@ import imageFile from '../../../../public/assets/images/gummy.jpg';
 
 export default {
   component: PortfolioCard,
-  title: 'Organisms/PortfolioCard',
+  title: 'Components/Organisms/PortfolioCard',
 };
 
 const Template = (args: Props) => <PortfolioCard {...args} />;

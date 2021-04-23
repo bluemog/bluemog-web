@@ -4,7 +4,7 @@ import imageFile from '../../../../public/assets/images/gummy.jpg';
 
 export default {
   component: PortfolioCardHead,
-  title: 'Molcules/Portfolio Card Head',
+  title: 'Components/Molcules/Portfolio Card Head',
 };
 
 const Template = (args: Props) => <PortfolioCardHead {...args} />;

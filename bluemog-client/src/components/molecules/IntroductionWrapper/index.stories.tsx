@@ -3,7 +3,7 @@ import IntroductionWrapper, { Props } from '.';
 
 export default {
   component: IntroductionWrapper,
-  title: 'Molcules/Introduction Wrapper',
+  title: 'Components/Molcules/Introduction Wrapper',
 };
 
 const Template = (args: Props) => <IntroductionWrapper {...args} />;
