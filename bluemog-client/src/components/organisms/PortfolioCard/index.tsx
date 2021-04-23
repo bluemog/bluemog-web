@@ -26,7 +26,7 @@ const StyledIntroductionWrapper = styled(IntroductionWrapper)`
   height: 60%;
 `;
 
-function ProfileCard({ portfolio }: Props) {
+function PortfolioCard({ portfolio }: Props) {
   const componentCSS = css`
         width: 30vw;
         height: 45.4vw;
@@ -45,12 +45,12 @@ function ProfileCard({ portfolio }: Props) {
     <div css={componentCSS}>
       <StyledPortfolioCardHead
         imageUrl={portfolio.imageUrl}
-        labels={portfolio.labels}
+        experiences={portfolio.experiences}
         name={portfolio.name}
       />
-      <StyledIntroductionWrapper text={portfolio.text} />
+      <StyledIntroductionWrapper introduction={portfolio.introduction} />
     </div>
   );
 }
 
-export default ProfileCard;
+export default PortfolioCard;
