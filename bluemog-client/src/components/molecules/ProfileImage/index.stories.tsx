@@ -12,6 +12,5 @@ const Template = (args: Props) => <ProfileImage {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   src: imageFile,
-  width: '130px',
-  height: '130px',
+  alt: 'profile',
 };

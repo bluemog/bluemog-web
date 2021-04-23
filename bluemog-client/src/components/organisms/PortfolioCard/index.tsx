@@ -2,31 +2,23 @@ import React, { ComponentProps } from 'react';
 import { css } from '@emotion/react';
 import IntroductionWrapper from 'components/molecules/IntroductionWrapper';
 import PortfolioCardHead from 'components/molecules/PortfolioCardHead';
-import Name from 'components/molecules/Name';
-import ExperienceLabel from 'components/molecules/ExperienceLabel';
+import ProfileInfo from 'components/molecules/ProfileInfo';
+import ProfileImage from '../../molecules/ProfileImage/index';
 
-type NameProps = ComponentProps<typeof Name>;
-type ExperienceLabelProps = ComponentProps<typeof ExperienceLabel>;
-type NameText = NameProps['name'];
-type ExperienceLabelText = ExperienceLabelProps['text'];
+type ProfileInfoProps = ComponentProps<typeof ProfileInfo>;
+type ProfileImageProps = ComponentProps<typeof ProfileImage>;
+type IntroductionWrapperProps = ComponentProps<typeof IntroductionWrapper>;
 
-export interface Portfolio {
-    name: NameText;
-    profileImageURL: string;
-    labels: ExperienceLabelText[];
-    introduction: string;
-}
+export type Portfolio = Pick<ProfileImageProps, 'src'> & ProfileInfoProps & IntroductionWrapperProps;
 
 export interface Props {
     portfolio: Portfolio;
-    width?: string;
-    height?: string;
 }
 
-function ProfileCard({ portfolio, width = '30vw', height = '45.4vw' }: Props) {
+function ProfileCard({ portfolio }: Props) {
   const componentCSS = css`
-        width: ${width};
-        height: ${height};
+        width: 30vw;
+        height: 45.4vw;
         border-radius: 12px;
         padding: 30px;
         background-color: skyblue;
@@ -39,11 +31,11 @@ function ProfileCard({ portfolio, width = '30vw', height = '45.4vw' }: Props) {
   return (
     <div css={componentCSS}>
       <PortfolioCardHead
-        src={portfolio.profileImageURL}
+        src={portfolio.src}
         labels={portfolio.labels}
         name={portfolio.name}
       />
-      <IntroductionWrapper text={portfolio.introduction} />
+      <IntroductionWrapper text={portfolio.text} />
     </div>
   );
 }

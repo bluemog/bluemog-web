@@ -11,12 +11,10 @@ type ExperienceLabelText = ExperienceLabelProps['text'];
 export interface Props {
     name: NameText;
     labels: ExperienceLabelText[];
-    height?: string;
-    marginLeft?: string;
 }
 
 function ProfileInfo({
-  name, labels, marginLeft,
+  name, labels,
 }: Props) {
   const componentCSS = css`
     display: flex;
@@ -24,7 +22,6 @@ function ProfileInfo({
     align-items: flex-start;
     height: '100%';
     justify-content: space-between;
-    margin-left: ${marginLeft};
     `;
 
   return (

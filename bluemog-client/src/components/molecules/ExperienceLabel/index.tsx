@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/react';
-import { BMSkyblue } from 'constants/theme';
 import { BMFont } from 'styles/base';
+import { BMSkyblue } from 'constants/theme';
 
 export interface Props {
     text: string;

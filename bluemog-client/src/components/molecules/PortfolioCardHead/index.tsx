@@ -8,12 +8,14 @@ import Name from '../Name';
 type NameProps = ComponentProps<typeof Name>;
 type ProfileInfoProps = ComponentProps<typeof ProfileInfo>;
 type ProfileImageProps = ComponentProps<typeof ProfileImage>;
-type Labels = Pick<ProfileInfoProps, 'labels'>
+type ProfileImageSrc = ProfileImageProps['src'];
+type Labels = ProfileInfoProps['labels'];
 type NameText = NameProps['name'];
 
-export interface Props extends Labels, ProfileImageProps {
-    // labels: ExperienceLabelText[];
+export interface Props {
     name: NameText;
+    src: ProfileImageSrc;
+    labels: Labels;
 }
 
 const StyledImage = styled(ProfileImage)`
@@ -22,7 +24,7 @@ const StyledImage = styled(ProfileImage)`
 `;
 
 function ProfileCardHead({
-  name, labels, ...imageProps
+  name, labels, src,
 }: Props) {
   const componentCSS = css`
     display: flex;
@@ -32,11 +34,16 @@ function ProfileCardHead({
   `;
 
   const labelsToBeShown = labels.filter((label) => label !== '').slice(0, 2);
+  const imageAlt = `${name} profile`;
+
+  const StyledProfileInfo = styled(ProfileInfo)`
+    margin-left: 10%;
+  `;
 
   return (
     <div css={componentCSS}>
-      <StyledImage {...imageProps} />
-      <ProfileInfo marginLeft="10%" name={name} labels={labelsToBeShown} />
+      <StyledImage src={src} alt={imageAlt} />
+      <StyledProfileInfo name={name} labels={labelsToBeShown} />
     </div>
   );
 }
