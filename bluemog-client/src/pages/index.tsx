@@ -1,10 +1,10 @@
 import React from 'react';
-import PortfolioCardsContainer from 'containers/PortfolioCardsContainer';
+import IntroPageContainer from 'containers/IntroPageContainer';
 
 function IntroPage() {
   const fetchUrl = 'https://portfolio-mocks.s3.ap-northeast-2.amazonaws.com/portfolio_list.json';
 
-  return <PortfolioCardsContainer fetchUrl={fetchUrl} />;
+  return <IntroPageContainer fetchUrl={fetchUrl} />;
 }
 
 export default IntroPage;
