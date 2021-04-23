@@ -10,6 +10,6 @@
         }
       ]
     ],
-    "plugins": ["@emotion/babel-plugin", "@emotion/styled"]
+    "plugins": ["@emotion/babel-plugin"]
 }
   
