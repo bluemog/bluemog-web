@@ -1,11 +1,10 @@
 import React from 'react';
-import Head from 'next/head';
+import PortfolioCardsContainer from 'containers/PortfolioCardsContainer';
 
-export default function Home() {
-  return (
-    <Head>
-      <title>Bluemog</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-  );
+function IntroPage() {
+  const fetchUrl = 'https://portfolio-mocks.s3.ap-northeast-2.amazonaws.com/portfolio_list.json';
+
+  return <PortfolioCardsContainer fetchUrl={fetchUrl} />;
 }
+
+export default IntroPage;
