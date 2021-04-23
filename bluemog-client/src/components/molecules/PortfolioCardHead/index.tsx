@@ -16,32 +16,34 @@ export interface Props {
     name: NameText;
     src: ProfileImageSrc;
     labels: Labels;
+    className?: string;
 }
 
 const StyledImage = styled(ProfileImage)`
-  height: '140px';
-  width: '140px';
+  height: 100%;
+  width: auto;
+`;
+
+const StyledProfileInfo = styled(ProfileInfo)`
+  margin-left: 10%;
+  height: 100%;
 `;
 
 function ProfileCardHead({
-  name, labels, src,
+  name, labels, src, className,
 }: Props) {
   const componentCSS = css`
     display: flex;
-    height: '30%';
-    width: '100%';
+    height: 130px;
+    width: 313px;
     justify-content: flex-start;
   `;
 
   const labelsToBeShown = labels.filter((label) => label !== '').slice(0, 2);
   const imageAlt = `${name} profile`;
 
-  const StyledProfileInfo = styled(ProfileInfo)`
-    margin-left: 10%;
-  `;
-
   return (
-    <div css={componentCSS}>
+    <div className={className} css={componentCSS}>
       <StyledImage src={src} alt={imageAlt} />
       <StyledProfileInfo name={name} labels={labelsToBeShown} />
     </div>

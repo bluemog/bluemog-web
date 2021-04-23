@@ -5,16 +5,18 @@ import { BMBackgroundBlue, BMDeepMint } from '../../../constants/theme';
 
 export interface Props {
     text: string;
+    className?: string;
 }
 
 function IntroductionWrapper({
   text,
+  className,
 }: Props) {
   const wrapperStyle = css`
     padding: 10px 0;
     border-radius: 12px;
-    width: 100%;
-    height: 60%;
+    width: 310px;
+    height: 320px;
     background: ${BMBackgroundBlue};
 
     p {
@@ -34,7 +36,7 @@ function IntroductionWrapper({
   `;
 
   return (
-    <div css={wrapperStyle}>
+    <div className={className} css={wrapperStyle}>
       <p>
         {text}
       </p>

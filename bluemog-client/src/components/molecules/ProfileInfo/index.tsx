@@ -11,21 +11,22 @@ type ExperienceLabelText = ExperienceLabelProps['text'];
 export interface Props {
     name: NameText;
     labels: ExperienceLabelText[];
+    className?: string;
 }
 
 function ProfileInfo({
-  name, labels,
+  name, labels, className,
 }: Props) {
   const componentCSS = css`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: '100%';
+    height: 130px;
     justify-content: space-between;
     `;
 
   return (
-    <div css={componentCSS}>
+    <div className={className} css={componentCSS}>
       <Name name={name} />
       {labels.map((label) => (
         <ExperienceLabel text={label} />
