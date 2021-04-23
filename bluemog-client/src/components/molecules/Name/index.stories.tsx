@@ -11,5 +11,4 @@ const Template = (args: Props) => <Name {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   name: 'JSKeum',
-  font: 'Roboto',
 };
