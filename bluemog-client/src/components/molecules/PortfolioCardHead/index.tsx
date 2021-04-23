@@ -8,13 +8,13 @@ import Name from '../Name';
 type NameProps = ComponentProps<typeof Name>;
 type ProfileInfoProps = ComponentProps<typeof ProfileInfo>;
 type ProfileImageProps = ComponentProps<typeof ProfileImage>;
-type ProfileImageSrc = ProfileImageProps['src'];
+type ProfileImageSrc = ProfileImageProps['imageUrl'];
 type Labels = ProfileInfoProps['labels'];
 type NameText = NameProps['name'];
 
 export interface Props {
     name: NameText;
-    src: ProfileImageSrc;
+    imageUrl: ProfileImageSrc;
     labels: Labels;
     className?: string;
 }
@@ -30,7 +30,7 @@ const StyledProfileInfo = styled(ProfileInfo)`
 `;
 
 function ProfileCardHead({
-  name, labels, src, className,
+  name, labels, imageUrl, className,
 }: Props) {
   const componentCSS = css`
     display: flex;
@@ -44,7 +44,7 @@ function ProfileCardHead({
 
   return (
     <div className={className} css={componentCSS}>
-      <StyledImage src={src} alt={imageAlt} />
+      <StyledImage imageUrl={imageUrl} alt={imageAlt} />
       <StyledProfileInfo name={name} labels={labelsToBeShown} />
     </div>
   );

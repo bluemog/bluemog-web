@@ -10,7 +10,7 @@ type ProfileInfoProps = ComponentProps<typeof ProfileInfo>;
 type ProfileImageProps = ComponentProps<typeof ProfileImage>;
 type IntroductionWrapperProps = ComponentProps<typeof IntroductionWrapper>;
 
-export type Portfolio = Pick<ProfileImageProps, 'src'> & ProfileInfoProps & IntroductionWrapperProps;
+export type Portfolio = Pick<ProfileImageProps, 'imageUrl'> & ProfileInfoProps & IntroductionWrapperProps;
 
 export interface Props {
     portfolio: Portfolio;
@@ -44,7 +44,7 @@ function ProfileCard({ portfolio }: Props) {
   return (
     <div css={componentCSS}>
       <StyledPortfolioCardHead
-        src={portfolio.src}
+        imageUrl={portfolio.imageUrl}
         labels={portfolio.labels}
         name={portfolio.name}
       />

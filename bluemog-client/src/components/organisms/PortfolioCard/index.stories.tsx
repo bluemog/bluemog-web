@@ -13,7 +13,7 @@ export const Default = Template.bind({});
 
 const samplePortfolio: Portfolio = {
   name: 'Juyoung',
-  src: imageFile,
+  imageUrl: imageFile,
   labels: ['국어국문학과', '정보문화학'],
   text: '따뜻한 얼그레이 한 잔 주세요',
 };
