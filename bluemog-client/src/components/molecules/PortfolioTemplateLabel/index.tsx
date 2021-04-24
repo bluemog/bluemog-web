@@ -5,9 +5,10 @@ import { BMFont } from 'styles/base';
 
 export interface Props {
   text: string,
+  className?: string,
 }
 
-function PortfolioTemplateLabel({ text }: Props) {
+function PortfolioTemplateLabel({ text, className }: Props) {
   const componentCSS = css`
       ${BMFont}
       color: ${BMDeepMint};
@@ -16,7 +17,7 @@ function PortfolioTemplateLabel({ text }: Props) {
   `;
 
   return (
-    <span css={componentCSS}>
+    <span className={className} css={componentCSS}>
       {text}
     </span>
   );

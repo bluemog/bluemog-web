@@ -13,10 +13,14 @@ export interface Props {
   className?: string;
 }
 
+const StyledPortfolioTemplateLabel = styled(PortfolioTemplateLabel)`
+  margin-left: 20px;
+`;
+
 const StyledPortfolioCard = styled(PortfolioCard)`
-  margin: 25px 15px;
-  width: 25%;
-  /* height 값은 ?! */
+  margin: 25px 20px;
+  width: 20vw;
+  height: 30vw;
 `;
 
 function IntroTemplate({ text, portfolioList, className }: Props) {
@@ -29,13 +33,12 @@ function IntroTemplate({ text, portfolioList, className }: Props) {
       flex-wrap: wrap;
       flex-direction: center;
       justify-content: space-between;
-      /* margin-top: 30px; */
     }
   `;
 
   return (
     <section css={componentCSS}>
-      <PortfolioTemplateLabel text={text} />
+      <StyledPortfolioTemplateLabel className={className} text={text} />
       <article>
         {portfolioList.map((portfolio) => (
           <StyledPortfolioCard className={className} portfolio={portfolio} />
