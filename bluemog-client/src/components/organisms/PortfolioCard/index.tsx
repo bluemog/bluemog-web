@@ -30,11 +30,12 @@ const StyledIntroductionWrapper = styled(IntroductionWrapper)`
 function PortfolioCard({ portfolio, className }: Props) {
   const componentCSS = css`
         width: 30vw;
-        height: 45.4vw;
+        height: calc(30vw * 1.5);
         min-width: 260px;
         min-height: 400px;
+        max-width: 430px;
         border-radius: 12px;
-        padding: calc(50vw * 0.08) calc(30vw * 0.08) calc(32vw * 0.08) calc(30vw * 0.08);
+        padding: 4% 2% 2% 2%;
         background-color: skyblue;
         display: flex;
         flex-direction: column;

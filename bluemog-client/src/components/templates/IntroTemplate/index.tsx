@@ -26,7 +26,8 @@ const StyledPortfolioCard = styled(PortfolioCard)`
 function IntroTemplate({ text, portfolioList, className }: Props) {
   const componentCSS = css`
     width: 83vw;
-    margin: 0 8%;
+    max-width: 1440px;
+    margin: 0 auto;
 
     article {
       display: flex;
