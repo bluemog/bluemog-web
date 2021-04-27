@@ -2,7 +2,7 @@ import React from 'react';
 import IntroPageContainer from 'containers/IntroPageContainer';
 
 function IntroPage() {
-  const fetchUrl = 'https://portfolio-mocks.s3.ap-northeast-2.amazonaws.com/portfolio_list.json';
+  const fetchUrl = 'https://portfolio-mocks.s3.ap-northeast-2.amazonaws.com/portfolio.json';
 
   return <IntroPageContainer fetchUrl={fetchUrl} />;
 }

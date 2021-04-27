@@ -12,10 +12,10 @@ function IntroPageContainer({ fetchUrl }: Props) {
   const fetchPortfolioList = async () => {
     try {
       const response = await axios.get(fetchUrl);
-      const fetchedPortfolioList = response.data.results;
+      const fetchedPortfolioList = response.data;
       setPortfolioList(fetchedPortfolioList);
     } catch (e) {
-      alert('데이터를 불러오는 중 에러가 발생했습니다😥');
+      alert('데이터를 불러오는 중 에러가 발생했습니다 😥');
     }
   };
 
