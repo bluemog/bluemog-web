@@ -10,12 +10,12 @@ type ExperienceLabelText = ExperienceLabelProps['text'];
 
 export interface Props {
     name: NameText;
-    labels: ExperienceLabelText[];
+    experiences: ExperienceLabelText[];
     className?: string;
 }
 
 function ProfileInfo({
-  name, labels, className,
+  name, experiences, className,
 }: Props) {
   const componentCSS = css`
     display: flex;
@@ -28,8 +28,9 @@ function ProfileInfo({
   return (
     <div className={className} css={componentCSS}>
       <Name name={name} />
-      {labels.map((label) => (
-        <ExperienceLabel text={label} />
+      {experiences.map((label, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <ExperienceLabel key={index} text={label} />
       ))}
     </div>
   );

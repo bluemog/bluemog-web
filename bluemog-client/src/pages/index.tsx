@@ -1,11 +1,10 @@
 import React from 'react';
-import Head from 'next/head';
+import IntroPageContainer from 'containers/IntroPageContainer';
 
-export default function Home() {
-  return (
-    <Head>
-      <title>Bluemog</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-  );
+function IntroPage() {
+  const fetchUrl = 'https://portfolio-mocks.s3.ap-northeast-2.amazonaws.com/portfolio.json';
+
+  return <IntroPageContainer fetchUrl={fetchUrl} />;
 }
+
+export default IntroPage;

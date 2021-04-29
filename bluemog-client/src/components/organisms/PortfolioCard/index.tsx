@@ -9,11 +9,16 @@ import ProfileImage from '../../molecules/ProfileImage/index';
 type ProfileInfoProps = ComponentProps<typeof ProfileInfo>;
 type ProfileImageProps = ComponentProps<typeof ProfileImage>;
 type IntroductionWrapperProps = ComponentProps<typeof IntroductionWrapper>;
+type ImageUrl = ProfileImageProps['imageUrl'];
 
-export type Portfolio = Pick<ProfileImageProps, 'src'> & ProfileInfoProps & IntroductionWrapperProps;
+export interface Portfolio extends ProfileInfoProps, IntroductionWrapperProps{
+  id: number;
+  imageUrl: ImageUrl;
+}
 
 export interface Props {
     portfolio: Portfolio;
+    className?: string;
 }
 
 const StyledPortfolioCardHead = styled(PortfolioCardHead)`
@@ -26,14 +31,15 @@ const StyledIntroductionWrapper = styled(IntroductionWrapper)`
   height: 60%;
 `;
 
-function ProfileCard({ portfolio }: Props) {
+function PortfolioCard({ portfolio, className }: Props) {
   const componentCSS = css`
         width: 30vw;
-        height: 45.4vw;
+        height: calc(30vw * 1.5);
         min-width: 260px;
         min-height: 400px;
+        max-width: 430px;
         border-radius: 12px;
-        padding: calc(50vw * 0.08) calc(30vw * 0.08) calc(32vw * 0.08) calc(30vw * 0.08);
+        padding: 4% 2% 2% 2%;
         background-color: skyblue;
         display: flex;
         flex-direction: column;
@@ -42,15 +48,15 @@ function ProfileCard({ portfolio }: Props) {
         `;
 
   return (
-    <div css={componentCSS}>
+    <div className={className} css={componentCSS}>
       <StyledPortfolioCardHead
-        src={portfolio.src}
-        labels={portfolio.labels}
+        imageUrl={portfolio.imageUrl}
+        experiences={portfolio.experiences}
         name={portfolio.name}
       />
-      <StyledIntroductionWrapper text={portfolio.text} />
+      <StyledIntroductionWrapper introduction={portfolio.introduction} />
     </div>
   );
 }
 
-export default ProfileCard;
+export default PortfolioCard;

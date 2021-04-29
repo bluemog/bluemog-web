@@ -11,6 +11,6 @@ const Template = (args: Props) => <ProfileImage {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  src: imageFile,
+  imageUrl: imageFile,
   alt: 'profile',
 };

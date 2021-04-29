@@ -13,9 +13,9 @@ export const Default = Template.bind({});
 
 const samplePortfolio: Portfolio = {
   name: 'Juyoung',
-  src: imageFile,
-  labels: ['국어국문학과', '정보문화학'],
-  text: '따뜻한 얼그레이 한 잔 주세요',
+  imageUrl: imageFile,
+  experiences: ['국어국문학과', '정보문화학'],
+  introduction: '따뜻한 얼그레이 한 잔 주세요',
 };
 
 Default.args = {

@@ -1,0 +1,30 @@
+[{
+  "name": "Gummy",
+  "experiences": ["플랫가든", "국문과"],
+  "imageUrl": "https://picsum.photos/id/237/200/300",
+  "introduction": "안녕하세요! 구미입니다"
+},
+{
+  "name": "JSKeum",
+  "experiences": ["브랜다진", "서양사학과"],
+  "imageUrl": "https://picsum.photos/id/88/200/300",
+  "introduction": "안녕하세요! JSKeum입니다"
+},
+{
+  "name": "JSKeum",
+  "experiences": ["브랜다진", "서양사학과"],
+  "imageUrl": "https://picsum.photos/id/88/200/300",
+  "introduction": "안녕하세요! JSKeum입니다"
+},
+{
+  "name": "JSKeum",
+  "experiences": ["브랜다진", "서양사학과"],
+  "imageUrl": "https://picsum.photos/id/88/200/300",
+  "introduction": "안녕하세요! JSKeum입니다"
+},
+{
+  "name": "JSKeum",
+  "experiences": ["브랜다진", "서양사학과"],
+  "imageUrl": "https://picsum.photos/id/88/200/300",
+  "introduction": "안녕하세요! JSKeum입니다"
+}]

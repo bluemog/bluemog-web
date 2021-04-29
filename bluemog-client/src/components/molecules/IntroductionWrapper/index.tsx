@@ -4,12 +4,12 @@ import { BMFont } from '../../../styles/base';
 import { BMBackgroundBlue, BMDeepMint } from '../../../constants/theme';
 
 export interface Props {
-    text: string;
+    introduction: string;
     className?: string;
 }
 
 function IntroductionWrapper({
-  text,
+  introduction,
   className,
 }: Props) {
   const wrapperStyle = css`
@@ -38,7 +38,7 @@ function IntroductionWrapper({
   return (
     <div className={className} css={wrapperStyle}>
       <p>
-        {text}
+        {introduction}
       </p>
     </div>
   );

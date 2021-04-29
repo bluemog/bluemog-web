@@ -2,12 +2,12 @@ import React from 'react';
 import { css } from '@emotion/react';
 
 export interface Props {
-    src: string,
+    imageUrl: string,
     alt: string,
     className?: string;
 }
 
-function ProfileImage({ src, alt, className }: Props) {
+function ProfileImage({ imageUrl, alt, className }: Props) {
   const componentCSS = css`
         border-radius: 12px;
         width: 130px;
@@ -15,7 +15,7 @@ function ProfileImage({ src, alt, className }: Props) {
     `;
 
   return (
-    <img className={className} css={componentCSS} src={src} alt={alt} />
+    <img className={className} css={componentCSS} src={imageUrl} alt={alt} />
   );
 }
 
