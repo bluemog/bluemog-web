@@ -28,8 +28,9 @@ function ProfileInfo({
   return (
     <div className={className} css={componentCSS}>
       <Name name={name} />
-      {experiences.map((label) => (
-        <ExperienceLabel text={label} />
+      {experiences.map((label, index) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <ExperienceLabel key={index} text={label} />
       ))}
     </div>
   );

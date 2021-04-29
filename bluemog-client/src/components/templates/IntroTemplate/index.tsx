@@ -42,7 +42,7 @@ function IntroTemplate({ text, portfolioList, className }: Props) {
       <StyledPortfolioTemplateLabel text={text} />
       <article>
         {portfolioList.map((portfolio) => (
-          <StyledPortfolioCard portfolio={portfolio} />
+          <StyledPortfolioCard key={portfolio.id} portfolio={portfolio} />
         ))}
       </article>
     </section>

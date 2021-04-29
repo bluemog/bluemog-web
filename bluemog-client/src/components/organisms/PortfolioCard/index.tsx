@@ -9,8 +9,12 @@ import ProfileImage from '../../molecules/ProfileImage/index';
 type ProfileInfoProps = ComponentProps<typeof ProfileInfo>;
 type ProfileImageProps = ComponentProps<typeof ProfileImage>;
 type IntroductionWrapperProps = ComponentProps<typeof IntroductionWrapper>;
+type ImageUrl = ProfileImageProps['imageUrl'];
 
-export type Portfolio = Pick<ProfileImageProps, 'imageUrl'> & ProfileInfoProps & IntroductionWrapperProps;
+export interface Portfolio extends ProfileInfoProps, IntroductionWrapperProps{
+  id: number;
+  imageUrl: ImageUrl;
+}
 
 export interface Props {
     portfolio: Portfolio;

@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import IntroTemplate from 'components/templates/IntroTemplate';
+import { Portfolio } from 'components/organisms/PortfolioCard';
 
 interface Props {
     fetchUrl: string;
 }
 
 function IntroPageContainer({ fetchUrl }: Props) {
-  const [portfolioList, setPortfolioList] = useState([]);
+  const [portfolioList, setPortfolioList] = useState<Portfolio[]>([]);
 
   const fetchPortfolioList = async () => {
     try {
-      const response = await axios.get(fetchUrl);
+      const response = await axios.get<Portfolio[]>(fetchUrl);
       const fetchedPortfolioList = response.data;
       setPortfolioList(fetchedPortfolioList);
     } catch (e) {
