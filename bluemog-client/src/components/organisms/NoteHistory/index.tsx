@@ -2,11 +2,10 @@ import React, { ComponentProps } from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import Heading from 'components/molecules/Heading';
-import NoteCard, { Note } from '../../molecules/NoteCard/index';
+import NoteCard, { Note } from 'components/molecules/NoteCard/index';
 
 export interface Props {
   noteList: Note[];
-  // className?: string,
 }
 
 const StyledHeading = styled(Heading)`

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { mainFont } from 'styles/base';
 
-const Heading = styled.h3`
+const Heading = styled.p`
   ${mainFont}
   display: inline-block;
   padding: 0;
