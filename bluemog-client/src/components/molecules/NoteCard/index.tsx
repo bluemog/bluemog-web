@@ -5,14 +5,16 @@ import ProfileImage from 'components/molecules/ProfileImage';
 import Heading from 'components/molecules/Heading';
 import Paragraph from 'components/molecules/Paragraph';
 
-// type ProfileImageProps = ComponentProps<typeof ProfileImage>;
-// type ProfileImageSrc = ProfileImageProps['imageUrl'];
+export interface Note {
+  id: number;
+  title: string;
+  text: string;
+  imageUrl: string;
+}
 
 export interface Props {
-  title: string,
-  text: string,
-  imageUrl: string,
-
+  note: Note;
+  className?: string;
 }
 
 const StyledDiv = styled.div`
@@ -31,7 +33,7 @@ const StyledImage = styled(ProfileImage)`
   border-radius: 10px;
 `;
 
-function ReviewCard({ title, text, imageUrl }: Props) {
+function NoteCard({ note, className }: Props) {
   const componentCSS = css`
     display: flex;
     flex-direction: column;
@@ -41,17 +43,17 @@ function ReviewCard({ title, text, imageUrl }: Props) {
     margin-left: 13px;
   `;
 
-  const imageAlt = `${title}`;
+  const imageAlt = `${note.title}`;
 
   return (
-    <StyledDiv>
-      <StyledImage imageUrl={imageUrl} alt={imageAlt} />
+    <StyledDiv className={className}>
+      <StyledImage imageUrl={note.imageUrl} alt={imageAlt} />
       <div css={componentCSS}>
-        <Heading>{title}</Heading>
-        <Paragraph>{text}</Paragraph>
+        <Heading>{note.title}</Heading>
+        <Paragraph>{note.text}</Paragraph>
       </div>
     </StyledDiv>
   );
 }
 
-export default ReviewCard;
+export default NoteCard;

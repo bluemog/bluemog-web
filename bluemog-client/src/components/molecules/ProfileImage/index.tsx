@@ -2,8 +2,8 @@ import React from 'react';
 import { css } from '@emotion/react';
 
 export interface Props {
-    imageUrl: string,
-    alt: string,
+    imageUrl: string;
+    alt: string;
     className?: string;
 }
 

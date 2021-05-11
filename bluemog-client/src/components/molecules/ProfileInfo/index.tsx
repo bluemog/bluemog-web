@@ -9,9 +9,9 @@ type NameText = NameProps['name'];
 type ExperienceLabelText = ExperienceLabelProps['text'];
 
 export interface Props {
-    name: NameText;
-    experiences: ExperienceLabelText[];
-    className?: string;
+  name: NameText;
+  experiences: ExperienceLabelText[];
+  className?: string;
 }
 
 function ProfileInfo({

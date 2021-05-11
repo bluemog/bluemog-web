@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { BMDeepMint } from 'constants/theme';
 
 export interface Props {
-    name: string,
+    name: string;
 }
 
 function Name({

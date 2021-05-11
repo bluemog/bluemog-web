@@ -4,8 +4,8 @@ import { BMDeepMint } from 'constants/theme';
 import { BMFont } from 'styles/base';
 
 export interface Props {
-  text: string,
-  className?: string,
+  text: string;
+  className?: string;
 }
 
 function PortfolioTemplateLabel({ text, className }: Props) {

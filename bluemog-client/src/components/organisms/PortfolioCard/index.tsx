@@ -17,8 +17,8 @@ export interface Portfolio extends ProfileInfoProps, IntroductionWrapperProps{
 }
 
 export interface Props {
-    portfolio: Portfolio;
-    className?: string;
+  portfolio: Portfolio;
+  className?: string;
 }
 
 const StyledPortfolioCardHead = styled(PortfolioCardHead)`
@@ -33,19 +33,19 @@ const StyledIntroductionWrapper = styled(IntroductionWrapper)`
 
 function PortfolioCard({ portfolio, className }: Props) {
   const componentCSS = css`
-        width: 30vw;
-        height: calc(30vw * 1.5);
-        min-width: 260px;
-        min-height: 400px;
-        max-width: 430px;
-        border-radius: 12px;
-        padding: 4% 2% 2% 2%;
-        background-color: skyblue;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        `;
+    width: 30vw;
+    height: calc(30vw * 1.5);
+    min-width: 260px;
+    min-height: 400px;
+    max-width: 430px;
+    border-radius: 12px;
+    padding: 4% 2% 2% 2%;
+    background-color: skyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    `;
 
   return (
     <div className={className} css={componentCSS}>
