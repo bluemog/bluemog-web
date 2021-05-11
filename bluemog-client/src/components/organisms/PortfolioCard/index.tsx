@@ -1,9 +1,9 @@
 import React, { ComponentProps } from 'react';
 import { css } from '@emotion/react';
+import styled from '@emotion/styled';
 import IntroductionWrapper from 'components/molecules/IntroductionWrapper';
 import PortfolioCardHead from 'components/molecules/PortfolioCardHead';
 import ProfileInfo from 'components/molecules/ProfileInfo';
-import styled from '@emotion/styled';
 import ProfileImage from '../../molecules/ProfileImage/index';
 
 type ProfileInfoProps = ComponentProps<typeof ProfileInfo>;

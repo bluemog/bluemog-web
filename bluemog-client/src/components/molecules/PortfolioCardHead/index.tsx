@@ -13,10 +13,10 @@ type Labels = ProfileInfoProps['experiences'];
 type NameText = NameProps['name'];
 
 export interface Props {
-    name: NameText;
-    imageUrl: ProfileImageSrc;
-    experiences: Labels;
-    className?: string;
+  name: NameText;
+  imageUrl: ProfileImageSrc;
+  experiences: Labels;
+  className?: string;
 }
 
 const StyledImage = styled(ProfileImage)`
