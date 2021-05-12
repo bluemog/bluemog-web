@@ -10,7 +10,7 @@ type PortfolioTemplateLabelText = PortfolioTemplateLabelProps['text'];
 export interface Props {
   text: PortfolioTemplateLabelText,
   portfolioList: Portfolio[],
-  className?: string;
+  className?: string,
 }
 
 const StyledPortfolioTemplateLabel = styled(PortfolioTemplateLabel)`
