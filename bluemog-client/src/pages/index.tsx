@@ -1,10 +1,10 @@
 import React from 'react';
-import IntroPageContainer from 'containers/IntroPageContainer';
+import NoteHistoryContainer from 'containers/NoteHistoryContainer';
 
 function IntroPage() {
-  const fetchUrl = 'https://portfolio-mocks.s3.ap-northeast-2.amazonaws.com/portfolio.json';
+  const fetchUrl = 'https://portfolio-mocks.s3.ap-northeast-2.amazonaws.com/notes.json';
 
-  return <IntroPageContainer fetchUrl={fetchUrl} />;
+  return <NoteHistoryContainer fetchUrl={fetchUrl} />;
 }
 
 export default IntroPage;

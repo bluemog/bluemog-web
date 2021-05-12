@@ -1,4 +1,4 @@
-import React, { ComponentProps } from 'react';
+import React from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import Heading from 'components/molecules/Heading';
