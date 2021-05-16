@@ -5,16 +5,17 @@ import Heading from 'components/molecules/Heading';
 
 export interface Props {
   text: string;
+  className?: string;
 }
 
-function HighlightedText({ text }: Props) {
+function HighlightedText({ className, text }: Props) {
   const componentCSS = css`
     display: inline;
     box-shadow: inset 0 -15px 0 ${highlightBlue};
   `;
 
   return (
-    <Heading><span css={componentCSS}>{text}</span></Heading>
+    <Heading className={className}><span css={componentCSS}>{text}</span></Heading>
   );
 }
 
