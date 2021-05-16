@@ -4,12 +4,12 @@ import styled from '@emotion/styled';
 import IntroductionWrapper from 'components/molecules/IntroductionWrapper';
 import PortfolioCardHead from 'components/molecules/PortfolioCardHead';
 import ProfileInfo from 'components/molecules/ProfileInfo';
-import ProfileImage from '../../molecules/ProfileImage/index';
+import Image from '../../molecules/Image';
 
 type ProfileInfoProps = ComponentProps<typeof ProfileInfo>;
-type ProfileImageProps = ComponentProps<typeof ProfileImage>;
+type ImageProps = ComponentProps<typeof Image>;
 type IntroductionWrapperProps = ComponentProps<typeof IntroductionWrapper>;
-type ImageUrl = ProfileImageProps['imageUrl'];
+type ImageUrl = ImageProps['imageUrl'];
 
 export interface Portfolio extends ProfileInfoProps, IntroductionWrapperProps{
   id: number;

@@ -1,13 +1,14 @@
 import React from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import ProfileImage from 'components/molecules/ProfileImage';
+import Image from 'components/molecules/Image';
 import Heading from 'components/molecules/Heading';
 import Paragraph from 'components/molecules/Paragraph';
 
 export interface Note {
   id: number;
   title: string;
+  rating: number;
   text: string;
   imageUrl: string;
 }
@@ -27,7 +28,7 @@ const StyledDiv = styled.div`
   align-items: center;
 `;
 
-const StyledImage = styled(ProfileImage)`
+const StyledImage = styled(Image)`
   height: 100%;
   width: auto;
   border-radius: 10px;
