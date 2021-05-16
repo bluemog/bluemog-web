@@ -3,7 +3,7 @@ import PortfolioInfo, { Props } from '.';
 
 export default {
   component: PortfolioInfo,
-  title: 'Components/Molcules/Portfolio Info',
+  title: 'Components/Molecules/PortfolioInfo',
 };
 
 const Template = (args: Props) => <PortfolioInfo {...args} />;

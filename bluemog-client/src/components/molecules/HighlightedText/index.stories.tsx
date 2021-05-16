@@ -4,7 +4,7 @@ import HighlightedText, { Props } from '.';
 
 export default {
   component: HighlightedText,
-  title: 'Components/Molcules/HighlightedText',
+  title: 'Components/Molecules/HighlightedText',
 };
 
 const Template = (args: Props) => <HighlightedText {...args} />;
