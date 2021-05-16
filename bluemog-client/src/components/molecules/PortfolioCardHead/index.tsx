@@ -1,25 +1,25 @@
 import React, { ComponentProps } from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import ProfileImage from '../ProfileImage';
+import Image from '../Image';
 import ProfileInfo from '../ProfileInfo';
 import Name from '../Name';
 
 type NameProps = ComponentProps<typeof Name>;
 type ProfileInfoProps = ComponentProps<typeof ProfileInfo>;
-type ProfileImageProps = ComponentProps<typeof ProfileImage>;
-type ProfileImageSrc = ProfileImageProps['imageUrl'];
+type ImageProps = ComponentProps<typeof Image>;
+type ImageSrc = ImageProps['imageUrl'];
 type Labels = ProfileInfoProps['experiences'];
 type NameText = NameProps['name'];
 
 export interface Props {
   name: NameText;
-  imageUrl: ProfileImageSrc;
+  imageUrl: ImageSrc;
   experiences: Labels;
   className?: string;
 }
 
-const StyledImage = styled(ProfileImage)`
+const StyledImage = styled(Image)`
   height: 100%;
   width: auto;
 `;
