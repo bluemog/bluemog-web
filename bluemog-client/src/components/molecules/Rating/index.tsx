@@ -22,10 +22,7 @@ function Rating({ rating }: Props) {
     width: 145px;
   `;
 
-  let num: number = rating;
-  if (num > 5) {
-    num = 5;
-  }
+  const num = rating > 5 ? 5 : rating;
 
   return (
     <div css={componentCSS}>
