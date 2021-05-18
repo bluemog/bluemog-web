@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import NoteHistory from 'components/organisms/NoteHistory';
-import { Note } from 'components/molecules/NoteCard';
+import { Note } from 'types/note';
 
 interface Props {
   fetchUrl: string;

@@ -2,8 +2,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import Image from 'components/molecules/Image';
-import { Note } from 'components/molecules/NoteCard';
-import NoteDetailInfo, { Book } from 'components/molecules/NoteDetailInfo';
+import NoteDetailInfo from 'components/molecules/NoteDetailInfo';
+import { Note } from 'types/note';
+import { Book } from 'types/book';
 
 export interface Props {
   className?: string;

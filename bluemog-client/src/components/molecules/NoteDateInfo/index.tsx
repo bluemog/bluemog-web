@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import React from 'react';
-import { Note } from 'component/molecules/NoteCard';
 import Paragraph from 'components/molecules/Paragraph';
+import { Note } from 'types/note';
 
 export interface Props {
   note: Note;
