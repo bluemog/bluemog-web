@@ -2,7 +2,8 @@ import React from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import Heading from 'components/molecules/Heading';
-import NoteCard, { Note } from 'components/molecules/NoteCard/index';
+import NoteCard from 'components/molecules/NoteCard/index';
+import { Note } from 'types/note';
 
 export interface Props {
   noteList: Note[];

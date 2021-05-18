@@ -4,4 +4,6 @@ export interface Note {
   rating: number;
   text: string;
   imageUrl: string;
+  createdAt: string;
+  user: string;
 }

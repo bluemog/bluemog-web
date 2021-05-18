@@ -3,8 +3,8 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import NoteDetailHead from 'components/molecules/NoteDetailHead';
 import Paragraph from 'components/molecules/Paragraph';
-import { Note } from 'component/molecules/NoteCard';
-import { Book } from 'components/molecules/NoteDetailInfo';
+import { Note } from 'types/note';
+import { Book } from 'types/book';
 import NoteDateInfo from '../../molecules/NoteDateInfo/index';
 
 export interface Props {

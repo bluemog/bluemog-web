@@ -1,5 +1,6 @@
 import React from 'react';
-import NoteCard, { Props, Note } from '.';
+import { Note } from 'types/note';
+import NoteCard, { Props } from '.';
 import imageFile from '../../../../public/assets/images/sample-01.jpg';
 
 export default {
