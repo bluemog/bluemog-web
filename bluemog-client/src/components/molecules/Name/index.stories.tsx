@@ -3,7 +3,7 @@ import Name, { Props } from '.';
 
 export default {
   component: Name,
-  title: 'Components/Molcules/Name',
+  title: 'Components/Molecules/Name',
 };
 
 const Template = (args: Props) => <Name {...args} />;

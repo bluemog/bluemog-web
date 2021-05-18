@@ -3,7 +3,7 @@ import PortfolioTemplateLabel, { Props } from '.';
 
 export default {
   component: PortfolioTemplateLabel,
-  title: 'Components/Molcules/PortfolioTemplateLabel',
+  title: 'Components/Molecules/PortfolioTemplateLabel',
 };
 
 const Template = (args: Props) => <PortfolioTemplateLabel {...args} />;

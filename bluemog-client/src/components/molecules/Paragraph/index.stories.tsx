@@ -4,7 +4,7 @@ import Paragraph from '.';
 
 export default {
   component: Paragraph,
-  title: 'Components/Molcules/Paragraph',
+  title: 'Components/Molecules/Paragraph',
 };
 
 export const Default: Story = () => (

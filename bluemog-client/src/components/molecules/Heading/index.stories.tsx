@@ -4,7 +4,7 @@ import Heading from '.';
 
 export default {
   component: Heading,
-  title: 'Components/Molcules/Heading',
+  title: 'Components/Molecules/Heading',
 };
 
 export const Default: Story = () => (
