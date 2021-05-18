@@ -4,14 +4,9 @@ import styled from '@emotion/styled';
 import HighlightedText from 'components/molecules/HighlightedText';
 import Paragraph from 'components/molecules/Paragraph';
 import Rating from 'components/molecules/Rating/';
-import { Note } from 'components/molecules/NoteCard';
+import { Book } from 'types/book';
+import { Note } from 'types/note';
 
-export interface Book {
-  title: string;
-  writer: string;
-  publishing: string;
-  imageUrl: string;
-}
 export interface Props {
   note: Note;
   book: Book;

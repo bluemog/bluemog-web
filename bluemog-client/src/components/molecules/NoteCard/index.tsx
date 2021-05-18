@@ -4,14 +4,7 @@ import styled from '@emotion/styled';
 import Image from 'components/molecules/Image';
 import Heading from 'components/molecules/Heading';
 import Paragraph from 'components/molecules/Paragraph';
-
-export interface Note {
-  id: number;
-  title: string;
-  rating: number;
-  text: string;
-  imageUrl: string;
-}
+import { Note } from 'types/note';
 
 export interface Props {
   note: Note;
