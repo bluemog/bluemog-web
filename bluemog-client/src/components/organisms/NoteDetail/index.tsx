@@ -5,7 +5,7 @@ import NoteDetailHead from 'components/molecules/NoteDetailHead';
 import Paragraph from 'components/molecules/Paragraph';
 import { Note } from 'types/note';
 import { Book } from 'types/book';
-import NoteDateInfo from '../../molecules/NoteDateInfo/index';
+import NoteDateInfo from 'components/molecules/NoteDateInfo/index';
 
 export interface Props {
   note: Note;

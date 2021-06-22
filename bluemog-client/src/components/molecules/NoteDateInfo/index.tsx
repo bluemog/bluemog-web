@@ -4,8 +4,9 @@ import React from 'react';
 import Paragraph from 'components/molecules/Paragraph';
 import { Note } from 'types/note';
 
+type NoteDate = Pick<Note, 'createdAt' | 'user'>;
 export interface Props {
-  note: Note;
+  note: NoteDate;
   className?: string;
 }
 

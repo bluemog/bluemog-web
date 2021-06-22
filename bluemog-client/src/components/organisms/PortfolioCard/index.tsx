@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import IntroductionWrapper from 'components/molecules/IntroductionWrapper';
 import PortfolioCardHead from 'components/molecules/PortfolioCardHead';
 import ProfileInfo from 'components/molecules/ProfileInfo';
-import Image from '../../molecules/Image';
+import Image from 'components/molecules/Image';
 
 type ProfileInfoProps = ComponentProps<typeof ProfileInfo>;
 type ImageProps = ComponentProps<typeof Image>;
